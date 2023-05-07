@@ -1,0 +1,1929 @@
+//Import nullstyles for website ======================================================================================================
+
+@import "nullstyle.scss";
+
+// Import fonts Damion and Titillium Web ======================================================================================================
+
+@import "fonts.scss";
+
+// SIZE VARS LAPTOPS AND PC=====================================================================================================
+
+$big: 2760px;
+
+$middle: 2280px;
+
+$lowMiddle: 2050px;
+
+$laptopL: 1940px;
+
+$laptop: 1224px;
+
+$tablet: 768px;
+
+// buttonTop.js STYLES FOR JS=====================================================================================================
+
+#buttonTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #3a7bd5, #3a6073);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $big) {
+    padding: 30px 45px;
+    font-size: 40px;
+    border-radius: 10px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptopL) {
+    padding: 15px 25px;
+    font-size: 25px;
+    border-radius: 6px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptop) {
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: $tablet) {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+}
+
+#buttonTop:hover {
+  background: linear-gradient(to right, #243b55, #141e30);
+  transition: all 0.5s;
+}
+
+// General css =====================================================================================================
+
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.748;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $big) {
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $middle) {
+    font-size: 70px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $lowMiddle) {
+    letter-spacing: 4px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: 1735px) {
+    font-size: 60px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptopL) {
+    font-size: 55px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptop) {
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+  @media screen and (max-width: $tablet) {
+    font-size: 19px;
+    letter-spacing: 1px;
+  }
+}
+
+.title::after {
+  content: "";
+  background-color: black;
+  height: 3px;
+  width: 100px;
+  margin: 15px auto 0 auto;
+  display: block;
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $big) {
+    height: 5px;
+    width: 200px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptopL) {
+    height: 4px;
+    width: 180px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptop) {
+    height: 3px;
+    width: 100px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+// Styling scrollbar =====================================================================================================
+
+::-webkit-scrollbar {
+  width: 15px;
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $big) {
+    width: 25px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptopL) {
+    width: 20px;
+  }
+  // MEDIA QUERIE =====================================================================================================================
+  @media screen and (max-width: $laptop) {
+    width: 15px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #222;
+}
+
+// firstPage Intro ======================================================================================================
+
+.firstPage {
+  background: #87509c;
+  min-height: 100vh;
+
+  &__container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 0 100px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $middle) {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+  // NAV ==============================================================================================================================
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 0 0;
+
+    @media screen and (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  // &__logo {
+  // }
+
+  &__logo img {
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      width: 220px;
+      height: 90px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      width: 200px;
+      height: 85px;
+      object-fit: contain;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      width: 180px;
+      height: 80px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      width: 100px;
+      height: 50px;
+      object-fit: contain;
+    }
+    @media screen and (max-width: $tablet) {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+
+  // &__links {
+  // }
+
+  &__link {
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.125;
+    padding: 8px 13px;
+    transition: all 1s;
+    cursor: pointer;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 32px;
+      padding: 16px 30px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 30px;
+      padding: 11px 25px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 25px;
+      padding: 8px 20px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 16px;
+      padding: 8px 13px;
+    }
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__link:hover {
+    background: #643a79;
+    transition: all 1s linear;
+  }
+  &__link:not(:last-child) {
+    margin-right: 4px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      margin-right: 8px;
+    }
+  }
+  // CONTENT ==============================================================================================================================
+  &__title {
+    font-size: 26px;
+    color: rgb(247, 243, 234);
+    font-weight: 700;
+    line-height: 1.158;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 225px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 56px;
+      padding: 450px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 48px;
+      padding: 225px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 40px;
+      padding: 350px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 26px;
+      padding: 225px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 18px;
+      padding: 150px 0 0 0;
+    }
+  }
+
+  // button =====================================================================================================
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    padding: 0 0 20px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      margin: 100px 0 0 0;
+      padding: 0 0 40px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      margin: 50px 0 0 0;
+      padding: 0 0 20px 0;
+    }
+  }
+
+  &__button a {
+    font-size: 13.403px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.455;
+    text-transform: uppercase;
+    text-align: center;
+    background: #eb7d4b;
+    padding: 10px 30px;
+    border: 1px solid #eb7d4b;
+    border-radius: 5px;
+    box-shadow: 0 4px 0px #c86a40;
+    position: relative;
+    transition: all 1s;
+    letter-spacing: 1px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 26px;
+      padding: 30px 60px;
+      border-radius: 8px;
+      letter-spacing: 2px;
+      box-shadow: 0 8px 0px #c86a40;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 23px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 22px;
+      padding: 20px 50px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 0px #c86a40;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 13.403px;
+      padding: 10px 30px;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #c86a40;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 10px;
+      padding: 8px 20px;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #c86a40;
+    }
+  }
+
+  &__button a:hover {
+    background: #e06932;
+    border: 1px solid #e06932;
+    box-shadow: 0 4px 0px #ca521a;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      box-shadow: 0 8px 0px #ca521a;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      box-shadow: 0 6px 0px #ca521a;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      box-shadow: 0 4px 0px #ca521a;
+    }
+  }
+
+  &__button a:active {
+    top: 4px;
+    box-shadow: none;
+    transition: top 1s;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      top: 8px;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      top: 6px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      top: 4px;
+    }
+  }
+}
+
+// secondPage Services ======================================================================================================
+
+.secondPage {
+  background: #17c2a4;
+  min-height: 100vh;
+  &__container {
+    max-width: 50%;
+    margin: 0 auto;
+    @media screen and (max-width: 1735px) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+  // CONTENT ==============================================================================================================================
+  &__title {
+    color: #fff;
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background: #14a58c;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.444;
+    text-align: center;
+    padding: 30px 0 50px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      padding: 50px 0 70px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 30px;
+      padding: 30px 0 50px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 12px;
+      padding: 10px 0 20px 0;
+    }
+  }
+  // Flex cards start ======================================================================================
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      margin: 125px auto auto;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      flex-wrap: wrap;
+      padding: 0 0 30px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      margin: 20px auto auto;
+    }
+    @media screen and (max-width: $tablet) {
+      margin: 10px auto auto;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex: 1 1 25%;
+    margin: 10px 10px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      flex: 0 1 30%;
+      margin: 20px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1660px) {
+      flex: 0 1 40%;
+      margin: 30px 20px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      margin: 20px 10px;
+    }
+    @media screen and (max-width: $tablet) {
+      margin: 10px 10px;
+    }
+  }
+
+  &__card:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
+  &__cardImg {
+    max-width: 125px;
+    max-height: 125px;
+    object-fit: contain;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      max-width: 225px;
+      max-height: 225px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      max-width: 190px;
+      max-height: 190px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: contain;
+    }
+    @media screen and (max-width: $tablet) {
+      max-width: 70px;
+      max-height: 70px;
+      object-fit: contain;
+    }
+  }
+
+  &__cardTitle {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.75;
+    padding-top: 50px;
+    text-align: center;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 48px;
+      padding-top: 70px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 36px;
+      padding-top: 60px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 24px;
+      padding-top: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 18px;
+      padding-top: 20px;
+    }
+  }
+
+  &__cardSubtitle {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 30px;
+    // MEDIApadding-top: 30px; QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 32px;
+      padding-top: 50px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 25px;
+      padding-top: 40px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 16px;
+      padding-top: 20px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+  }
+}
+
+// Third page start Team ======================================================================================
+
+.thirdPage {
+  background: #e7f1f8;
+  min-height: 100vh;
+
+  &__container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  // CONTANT ==============================================================================================================================
+  &__title {
+    color: rgb(60, 71, 97);
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background-color: #c8d9e5;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgb(60, 71, 97);
+    line-height: 1.444;
+    text-align: center;
+    padding: 30px 0 50px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      padding: 50px 0 70px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 30px;
+      padding: 50px 0 50px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      padding: 30px 0 50px 0;
+    }
+    @media screen and (max-width: $laptop) {
+      font-size: 14px;
+      padding: 10px 0 20px 0;
+    }
+  }
+  // Flex cards ======================================================================================
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      margin: 50px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $middle) {
+      flex-wrap: wrap;
+      padding: 0 0 50px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      margin: 0;
+    }
+    @media screen and (max-width: $tablet) {
+      margin: 0;
+      justify-content: center;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex: 1 1 25%;
+    margin: 10px 10px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $middle) {
+      flex: 0 1 30%;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1660px) {
+      flex: 0 1 40%;
+    }
+  }
+
+  &__colContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__colImgBox {
+    padding: 5px 0 30px 0;
+  }
+
+  &__colImg {
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      width: 260px;
+      height: 260px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      width: 170px;
+      height: 170px;
+      object-fit: contain;
+    }
+    @media screen and (max-width: $tablet) {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+    }
+  }
+
+  &__colTitle {
+    font-size: 24px;
+    color: rgb(39, 40, 61);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 10px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 48px;
+      padding: 30px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 35px;
+      padding: 20px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 24px;
+      padding: 10px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 18px;
+      padding: 7px 0 0 0;
+    }
+  }
+
+  &__colSubtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(48, 186, 231);
+    line-height: 1.125;
+    text-align: center;
+    padding: 25px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 32px;
+      padding: 35px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 25px;
+      padding: 30px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 16px;
+      padding: 25px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      padding: 15px 0 0 0;
+    }
+  }
+
+  &__colText {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(60, 71, 97);
+    line-height: 1.5;
+    text-align: center;
+    padding: 30px 0 0 0;
+    display: flex;
+    flex: 1 1 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 32px;
+      padding: 40px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 25px;
+      padding: 35px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 16px;
+      padding: 20px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 13px;
+      padding: 16px 0 0 0;
+    }
+  }
+
+  &__colContacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 0 0;
+  }
+
+  &__colContact {
+    display: flex;
+    flex: 1 1 25%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0;
+  }
+
+  &__colContact img {
+    border: 1px solid #bdd1df;
+    border-radius: 10px;
+    background: #bdd1df;
+    padding: 10px;
+    transition: all 1s;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 20px;
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      border-radius: 5px;
+      width: 30px;
+      height: 30px;
+      padding: 7px;
+      object-fit: contain;
+    }
+    @media screen and (max-width: $laptop) {
+      border-radius: 5px;
+      width: 30px;
+      height: 30px;
+      padding: 7px;
+      object-fit: contain;
+    }
+  }
+
+  &__colContact img:hover {
+    background: #000;
+    transition: all 1s;
+  }
+}
+
+// fourth page start Skills ============================================================================================================
+
+.fourthPage {
+  min-height: 100vh;
+  &__container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  // CONTENT ==============================================================================================================================
+
+  &__textBlock {
+    max-width: 50%;
+    margin: 0 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    color: rgb(60, 71, 97);
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background-color: #dfe8ed;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgb(60, 71, 97);
+    line-height: 1.444;
+    text-align: center;
+    padding: 30px 0 50px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      padding: 50px 0 70px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 30px;
+      padding: 50px 0 50px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      padding: 30px 0 50px 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      padding: 10px 0 20px 0;
+    }
+  }
+  // Circle charts ============================================================================================================
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 100px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1660px) {
+      flex-wrap: wrap;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      padding: 30px 0 50px 0;
+    }
+    @media screen and (max-width: $laptop) {
+      padding: 30px 0 50px 0;
+      justify-content: center;
+    }
+  }
+}
+
+.row {
+  &__circle {
+    display: flex;
+    margin: 10px;
+    flex: 1 1 25%;
+    text-align: center;
+    justify-content: center;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1660px) {
+      margin: 20px 10px;
+      flex: 0 1 40%;
+    }
+  }
+}
+// Circle charts item ============================================================================================================
+.circle {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__precent {
+    font-size: 43px;
+    color: rgb(60, 71, 97);
+    text-transform: uppercase;
+    line-height: none;
+    padding: 35px 30px;
+    border: 10px solid #dfe8ed;
+    border-radius: 50%;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 60px;
+      padding: 60px 55px;
+      border: 18px solid #dfe8ed;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 50px;
+      padding: 50px 45px;
+      border: 15px solid #dfe8ed;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 35px;
+      padding: 30px 25px;
+      border: 10px solid #dfe8ed;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 20px;
+      padding: 20px 15px;
+      border: 10px solid #dfe8ed;
+    }
+  }
+  // Circles PRECENT  ============================================================================================================
+  &__precent-blue {
+    border: 10px solid #30bae7;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      border: 18px solid #30bae7;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      border: 15px solid #30bae7;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      border: 10px solid #30bae7;
+    }
+  }
+
+  &__precent-pink {
+    border: 10px solid #d74680;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      border: 18px solid #d74680;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      border: 15px solid #d74680;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      border: 10px solid #d74680;
+    }
+  }
+
+  &__precent-green {
+    border: 10px solid #15c7a8;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      border: 18px solid #15c7a8;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      border: 15px solid #15c7a8;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      border: 10px solid #15c7a8;
+    }
+  }
+
+  &__precent-orange {
+    border: 10px solid #eb7d4b;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      border: 18px solid #eb7d4b;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      border: 15px solid #eb7d4b;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      border: 10px solid #eb7d4b;
+    }
+  }
+  &__smallPrecent {
+    font-size: 30px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 50px;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 40px;
+      // MEDIA QUERIE =====================================================================================================================
+      @media screen and (max-width: $laptop) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: $tablet) {
+        font-size: 20px;
+      }
+    }
+  }
+  &__title {
+    font-size: 24px;
+    color: rgb(60, 71, 97);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 20px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 48px;
+      padding: 40px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 38px;
+      padding: 30px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 24px;
+      padding: 20px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 20px;
+      padding: 20px 0 0 0;
+    }
+  }
+}
+
+// fifth page start portfolio ============================================================================================================
+
+.fifthPage {
+  min-height: 100vh;
+  background: #ffdd99;
+  &__container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  // CONTENT ==============================================================================================================================
+  &__textBlock {
+    max-width: 50%;
+    margin: 0 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    color: rgb(57, 57, 57);
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background-color: #e5c37f;
+  }
+
+  &__subtitle {
+    padding: 30px 0 70px 0;
+    font-size: 18px;
+    color: rgb(57, 57, 57);
+    line-height: 1.444;
+    text-align: center;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 50px 0 20px 0;
+      font-size: 40px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      padding: 30px 0 30px 0;
+      font-size: 30px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      padding: 30px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      padding: 10px 0 0 0;
+    }
+  }
+  // NAV ==============================================================================================================================
+  &__nav {
+    margin: 50px 0;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav-item {
+    display: flex;
+    background: #ebc985;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  &__nav-item a {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: rgb(57, 57, 57);
+    line-height: 1.083;
+    display: flex;
+    flex: 1 1 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 20px 40px;
+      font-size: 36px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      padding: 10px 30px;
+      font-size: 28px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $tablet) {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+  }
+
+  &__nav-item:hover {
+    background: #fff;
+    transition: all 0.5s;
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  // FLEX - CARDS ==============================================================================================================================
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+  // BUTTON ==================================================================================================================================
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    padding: 0 0 80px 0;
+  }
+
+  &__button a {
+    font-size: 13.403px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.455;
+    text-transform: uppercase;
+    text-align: center;
+    background: #17c2a4;
+    padding: 10px 30px;
+    border: 1px solid #17c2a4;
+    border-radius: 5px;
+    box-shadow: 0 4px 0px #0d9e84;
+    position: relative;
+    transition: all 1s;
+    letter-spacing: 1px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 26px;
+      padding: 20px 50px;
+      letter-spacing: 2px;
+      box-shadow: 0 8px 0px #0d9e84;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 22px;
+      padding: 15px 30px;
+      letter-spacing: 1px;
+      box-shadow: 0 6px 0px #0d9e84;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 13.403px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #0d9e84;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 10px;
+      padding: 8px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #0d9e84;
+    }
+  }
+
+  &__button a:hover {
+    background: #13927b;
+    border: 1px solid #13927b;
+    box-shadow: 0 4px 0px #117966;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      box-shadow: 0 8px 0px #117966;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      box-shadow: 0 6px 0px #117966;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      box-shadow: 0 4px 0px #117966;
+    }
+  }
+
+  &__button a:active {
+    box-shadow: none;
+    transition: top 1s;
+    top: 4px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      top: 8px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      top: 6px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      top: 4px;
+    }
+  }
+}
+// FLEX - CARDS ==============================================================================================================================
+
+.row {
+  &__column {
+    padding: 20px 20px 70px 20px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      display: flex;
+      flex: 0 1 40%;
+      justify-content: center;
+    }
+  }
+}
+.column {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 450px;
+    max-height: 450px;
+    object-fit: contain;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      max-width: 550px;
+      max-height: 550px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      max-width: 425px;
+      max-height: 425px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      max-width: 250px;
+      max-height: 250px;
+      object-fit: contain;
+    }
+    @media screen and (max-width: $tablet) {
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: rgb(57, 57, 57);
+    text-transform: uppercase;
+    line-height: 1.083;
+    text-align: center;
+    padding: 25px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 36px;
+      padding: 35px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 25px;
+      padding: 25px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 20px;
+    }
+  }
+}
+
+// sixth page start About us ============================================================================================================
+
+.sixthPage {
+  min-height: 100vh;
+  background: #d74680;
+  &__container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  // CONTENT ============================================================================================================
+
+  &__textBlock {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: rgb(255, 255, 255);
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background-color: #b73c6d;
+  }
+
+  &__subtitle {
+    padding: 30px 0 70px 0;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.444;
+    text-align: center;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 50px 0 70px 0;
+      font-size: 40px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      padding: 50px 0 50px 0;
+      font-size: 30px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      padding: 30px 0 50px 0;
+      font-size: 18px;
+    }
+    @media screen and (max-width: $tablet) {
+      padding: 10px 0 20px 0;
+      font-size: 14px;
+    }
+  }
+  // FLEX - CARDS ============================================================================================================
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0 0 0;
+    @media screen and (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+}
+.row {
+  &__card {
+    display: flex;
+    flex: 1 1 50%;
+    margin: 0 0 100px 0;
+    @media screen and (max-width: $tablet) {
+      margin: 0 0 50px 0;
+    }
+  }
+}
+.card {
+  &__content {
+    display: flex;
+    padding: 10px;
+  }
+
+  // &__img {
+  // }
+
+  &__img img {
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    margin: 0 0 0 25px;
+    display: flex;
+    flex-direction: column;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      margin: 0 0 0 35px;
+    }
+    @media screen and (max-width: $tablet) {
+      margin: 0 0 0 25px;
+    }
+  }
+
+  &__text {
+    padding: 10px 10px 0 0;
+    font-size: 17.5px;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    line-height: 1.486;
+    display: flex;
+    flex: 1 1 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 35px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 30px;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 24px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 17.5px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__author {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.083;
+    padding: 25px 10px 0 0;
+
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 48px;
+      padding: 35px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 43px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 37px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 18px;
+    }
+  }
+
+  &__speciality {
+    font-size: 18px;
+    color: rgb(255, 221, 153);
+    line-height: 1.444;
+    padding: 0 10px 0 0;
+
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 36px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 32px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 28px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 13px;
+    }
+  }
+}
+
+// footer page start CONTACTS ============================================================================================================
+
+.footer {
+  min-height: 100vh;
+  background: #3c5499;
+  display: flex;
+  flex-direction: column;
+
+  &__flexContent {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: rgb(255, 255, 255);
+    padding: 70px 0 0 0;
+  }
+
+  &__title::after {
+    background-color: #273a71;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.444;
+    text-align: center;
+    padding: 30px 0 0 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      padding: 50px 0 0 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 35px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 30px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      padding: 30px 0 0 0;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 14px;
+      padding: 10px 0 0 0;
+    }
+  }
+
+  &__form {
+    padding: 100px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      padding: 120px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      padding: 100px 0;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      padding: 50px 0;
+    }
+    @media screen and (max-width: $tablet) {
+      padding: 30px 0;
+    }
+  }
+
+  &__text {
+    background: #273a71;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 45%;
+    margin: 15px 10px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      width: 48%;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 35px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1545px) {
+      display: block;
+      width: 100%;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      border-radius: 3px;
+      padding: 10px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 16px;
+      border-radius: 3px;
+      padding: 10px;
+    }
+  }
+
+  &__textarea {
+    background: #273a71;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    width: 93%;
+    margin: 15px 10px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 40px;
+      padding: 15px;
+      border-radius: 5px;
+      width: 98%;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      font-size: 35px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1545px) {
+      width: 100%;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 18px;
+      border-radius: 3px;
+      padding: 10px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 16px;
+      border-radius: 3px;
+      padding: 10px;
+    }
+  }
+
+  &__button {
+    font-size: 13.403px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.455;
+    text-transform: uppercase;
+    text-align: center;
+    background: #30bae7;
+    padding: 10px 50px;
+    border: 1px solid #30bae7;
+    border-radius: 5px;
+    box-shadow: 0 4px 0px #1e91b8;
+    position: relative;
+    transition: all 1s;
+    margin: 15px 10px 15px 35%;
+    letter-spacing: 1px;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 26px;
+      padding: 20px 70px;
+      border-radius: 8px;
+      box-shadow: 0 8px 0px #1e91b8;
+      margin: 15px 10px 15px 40%;
+      letter-spacing: 2px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $middle) {
+      font-size: 23px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $lowMiddle) {
+      margin: 15px 10px 15px 38%;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 22px;
+      padding: 20px 50px;
+      border-radius: 6px;
+      box-shadow: 0 6px 0px #1e91b8;
+      margin: 15px 10px 15px 40%;
+      letter-spacing: 1px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 13.403px;
+      padding: 10px 40px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #1e91b8;
+      margin: 15px 10px 15px 39%;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 10px;
+      padding: 8px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 0px #1e91b8;
+      margin: 15px 10px 15px 40%;
+    }
+    @media screen and (max-width: 320px) {
+      margin: 15px 10px 15px 8%;
+    }
+  }
+
+  &__button:hover {
+    background: #1e91b8;
+    border: 1px solid #1e91b8;
+    box-shadow: 0 4px 0px #167797;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      box-shadow: 0 8px 0px #167797;
+    } // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      box-shadow: 0 6px 0px #167797;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      box-shadow: 0 4px 0px #167797;
+    }
+  }
+
+  &__button:active {
+    top: 4px;
+    box-shadow: none;
+    transition: top 1s;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      top: 8px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      top: 6px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      top: 4px;
+    }
+  }
+  // FOOTER NAV ==========================================================================================================================
+  &__footer {
+    background: #344b8e;
+  }
+
+  &__nav {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 25px 0;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      padding: 15px 0;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__listItem a {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    line-height: 1.246;
+    text-align: center;
+    transition: color 0.5s;
+    display: flex;
+    flex: 1 1 auto;
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $big) {
+      font-size: 48px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $middle) {
+      font-size: 40px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: 1545px) {
+      font-size: 38px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptopL) {
+      font-size: 30px;
+    }
+    // MEDIA QUERIE =====================================================================================================================
+    @media screen and (max-width: $laptop) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $tablet) {
+      font-size: 15px;
+    }
+  }
+
+  &__listItem a:hover {
+    color: #30bae7;
+    transition: all 0.5s;
+  }
+}
